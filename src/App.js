@@ -13,13 +13,13 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const topics = await getTopics()
-      // console.log(topics.data[0])
-      setTopics(topics.data[0])
+      console.log(topics.data[0])
+      setTopics(topics.data)
    }
    fetchData()
   }, [])
 
-  console.log(topics.title, "STATE")
+  console.log(topics[0], "STATE")
   return (
     <div className="App">
       {/* NavBar items should act as filters to filter Cards by topic - Limit items to main categories */}

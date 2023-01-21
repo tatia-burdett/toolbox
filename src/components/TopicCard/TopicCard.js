@@ -5,15 +5,16 @@ import img from '../../images/img.jpg'
 
 
 function TopicCard({ topics }) {
-    console.log(topics.title, 'TOPIC CARD')
+    // console.log(topics.title, 'TOPIC CARD')
 
     return (
+        // Map Topic Cards, use default img for now
         <div className='card-container'>
             <Card style={{ width: '18rem' }} className='card'>
                 <Card.Img variant='top' src={img} />
                 <Card.Body>
-                    <Card.Title>{topics.title}</Card.Title>
-                    <Card.Text>{topics.content}</Card.Text>
+                    {/* <Card.Title>{topics.title}</Card.Title>
+                    <Card.Text>{topics.content}</Card.Text> */}
                 </Card.Body>
             </Card>
         </div>
