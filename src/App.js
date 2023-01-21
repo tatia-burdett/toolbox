@@ -11,15 +11,21 @@ function App() {
   const [topics, setTopics] = useState([])
 
   useEffect(() => {
-    getTopics()
-  })
+    const fetchData = async () => {
+      const topics = await getTopics()
+      // console.log(topics.data[0])
+      setTopics(topics.data[0])
+   }
+   fetchData()
+  }, [])
 
+  console.log(topics.title, "STATE")
   return (
     <div className="App">
       {/* NavBar items should act as filters to filter Cards by topic - Limit items to main categories */}
       <NavBar />
       {/* Cards sorted by most recent, regardless of topic */}
-      <TopicCard />
+      <TopicCard topics={topics}/>
     </div>
   );
 }

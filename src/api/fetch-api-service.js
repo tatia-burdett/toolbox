@@ -6,7 +6,6 @@ async function getTopics() {
     
     try {
         const res = await axios.get(url)
-        console.log(res)
         return res
     }
     catch (error) {
